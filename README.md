@@ -60,5 +60,56 @@ query{
     }
 }
 
+query{
+  admMenus{
+    id
+    description
+    order
+    admPage{
+      id
+      description
+    }
+    admMenuParent{
+      id
+      description
+    }
+  }
+}
+
+query{
+  admPages{
+    id
+    description
+    admIdProfiles
+    pageProfiles
+  }
+}
+
+query{
+  admProfiles{
+    id
+    description
+    admPages{
+      id
+      description
+    }
+    admUsers{
+      id
+      login
+      name
+    }
+  }
+}
+
+query{
+  admUsers{
+    id
+    login
+    name
+    email
+    active
+    admIdProfiles
+  }
+}
 
 ```
