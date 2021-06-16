@@ -23,3 +23,42 @@ php -S localhost:8000 -t public
 http://localhost:8000/graphiql
 
 ```
+
+# Queries
+
+```
+query{
+    admParameterCategory(id: 1){
+      id
+      description
+      order
+    }
+}
+
+query{
+    admParameterCategories{
+      id
+      description
+      order
+    }
+}
+
+query{
+    admParameter(id: 1){
+      id
+      description
+    }
+}
+
+query{
+    admParameters{
+      id
+      description
+      admParameterCategory {
+        id
+      }
+    }
+}
+
+
+```
