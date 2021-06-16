@@ -102,13 +102,22 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
-                // ExampleQuery::class,
+                'admParameter' => App\GraphQL\Queries\AdmParameter\AdmParameterQuery::class,
+                'admParameters' => App\GraphQL\Queries\AdmParameter\AdmParametersQuery::class,
+                'admParameterCategory' => App\GraphQL\Queries\AdmParameterCategory\AdmParameterCategoryQuery::class,
+                'admParameterCategories' => App\GraphQL\Queries\AdmParameterCategory\AdmParameterCategoriesQuery::class,
             ],
             'mutation' => [
-                // ExampleMutation::class,
+                'createAdmParameter' => App\GraphQL\Mutations\AdmParameter\CreateAdmParameterMutation::class,
+                'updateAdmParameter' => App\GraphQL\Mutations\AdmParameter\UpdateAdmParameterMutation::class,
+                'deleteAdmParameter' => App\GraphQL\Mutations\AdmParameter\DeleteAdmParameterMutation::class,
+                'createAdmParameterCategory' => App\GraphQL\Mutations\AdmParameterCategory\CreateAdmParameterCategoryMutation::class,
+                'updateAdmParameterCategory' => App\GraphQL\Mutations\AdmParameterCategory\UpdateAdmParameterCategoryMutation::class,
+                'deleteAdmParameterCategory' => App\GraphQL\Mutations\AdmParameterCategory\DeleteAdmParameterCategoryMutation::class,
             ],
             'types' => [
-                // ExampleType::class,
+                'AdmParameter' => App\GraphQL\Types\AdmParameterType::class,
+                'AdmParameterCategory' => App\GraphQL\Types\AdmParameterCategoryType::class
             ],
             'middleware' => [],
             'method' => ['get', 'post'],
